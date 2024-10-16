@@ -92,3 +92,16 @@ JOIN professors p ON c.professor_id = p.id;
 SELECT DISTINCT c.course_name
 FROM courses c
 JOIN enrollments e ON c.id = e.course_id;
+
+-- UPDATE
+
+-- Update one of the student’s emails
+UPDATE students
+SET email = 'john.updated@example.com'
+WHERE id = 1;
+
+-- DELETE
+
+-- Remove a student from one of their courses
+DELETE FROM enrollments
+WHERE student_id = 1 AND course_id = 1;
