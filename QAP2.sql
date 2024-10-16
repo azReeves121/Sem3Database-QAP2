@@ -73,8 +73,9 @@ VALUES
 (5, 3, '2024-09-01');
 
 
-
 --QUERIES
+
+
 -- Retrieve the full names of all students enrolled in “Physics 101”
 SELECT CONCAT(s.first_name, ' ', s.last_name) AS full_name
 FROM students s
