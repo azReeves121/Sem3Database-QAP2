@@ -5,7 +5,7 @@
 -- Products table
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,
-    product_name VARCHAR(100),
+    product_name VARCHAR(50),
     price DECIMAL(10, 2),
     stock_quantity INT
 );
@@ -15,7 +15,7 @@ CREATE TABLE customers (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
-    email VARCHAR(100)
+    email VARCHAR(50)
 );
 
 -- Orders table

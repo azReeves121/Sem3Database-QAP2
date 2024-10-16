@@ -16,13 +16,13 @@ CREATE TABLE professors (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
-    department VARCHAR(100)
+    department VARCHAR(50)
 );
 
 -- Courses table
 CREATE TABLE courses (
     id SERIAL PRIMARY KEY,
-    course_name VARCHAR(100),
+    course_name VARCHAR(50),
     course_description TEXT,
     professor_id INT REFERENCES professors(id)
 );
