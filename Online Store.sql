@@ -74,6 +74,7 @@ VALUES
 (4, 2, 1), (4, 3, 1),
 (5, 4, 2), (5, 5, 1);
 
+
 -- -QUERIES
 
 -- Retrieve the names and stock quantities of all products
@@ -92,4 +93,27 @@ JOIN order_items oi ON o.id = oi.order_id
 JOIN products p ON oi.product_id = p.id
 WHERE o.customer_id = 1;
 
+
+-- UPDATE
+
+
+-- Simulate reducing stock quantities of items for order 1
+UPDATE products
+SET stock_quantity = stock_quantity - 1
+WHERE id = 1;
+
+UPDATE products
+SET stock_quantity = stock_quantity - 2
+WHERE id = 2;
+
+
+-- DELETE 
+
+
+-- Remove one of the orders and all associated order items
+DELETE FROM order_items
+WHERE order_id = 1;
+
+DELETE FROM orders
+WHERE id = 1;
 
